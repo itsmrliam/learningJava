@@ -232,5 +232,85 @@ public class Main {
             i++;
         }
         while (i < 5);
+        /* For Loops - When you know exactly how many times you want to loop through a block of code,
+           use the FOR loop instead of a WHILE loop
+           EXAMPLE:
+           for (statement 1; statement 2; statement3) {
+                // code to be executed
+           }
+           Statement 1 is executed (one time) before the execution of the code block
+           Statement 2 defines the condition for executing the code block
+           Statement 3 is executed (every time) after the code block has been executed.
+         */
+        for (int r = 0; r < 5; r++) {
+            System.out.println(r);
+        }
+        /*
+        Statement 1 sets a variable before the loop starts (r = 0)
+        Statement 2 defines the condition for the loop to run on (r must be less than 5). If the condition is true,
+        the loop will start over again, if it's false, the loop will end.
+        Statement 3 increases a value (r++) each time the code block in the loop has been executed (the print statement)
+         */
+        for (int numbr = 100; numbr > 80; numbr--){ // The same as above but counting backwards!
+            System.out.println(numbr);
+        }
+        for (int t = 0; t <=10; t = t + 2) { // every time t is less than or equal to 10, adds 2 until hits 10.
+            System.out.println(t);
+            System.out.println("Adding 2");
+        }
+        // For-Each Loop - Used exclusively for to loop through elements in an Array
+        String[] cars = {"Volvo", "BMW", "Ford", "Mercedes"};
+        // The following example outputs all elements in the CARS array, using a for-each loop
+        for (String car : cars) {
+            System.out.println(car);
+        }
+        /* Java Break
+        The break statement was used earlier to "jump out" of a switch statement
+        It can also be used to jump out of a loop.
+        This example stops the loop when h is equal to 4:
+         */
+        for (int f = 0; f < 10; f++) {
+            if (f == 4) {
+                System.out.println("You broke out of the loop!");
+                break; // Breaks out of the loop because f became equal to 4
+            }
+                System.out.println(f);
+        }
+        /* Java Continue
+        The Continue Statement breaks one iteration (in the loop) if a specified condition occurs,
+        and continues with the next iteration in the loop
+        It's the same as break but it continues the loop instead of jumping out of it.
+        The below example skips the value of 4 and continues.
+         */
+        for (int k = 0; k < 10; k++) {
+            if (k == 4) {
+                System.out.println("Skipping 4!");
+                continue; // Skips 4 and continues the loop
+            }
+            else if (k == 0) {
+                System.out.println("Beginning of loop");
+                continue; // Misses out 0 in the loop (first iteration) and replacing it with a message
+            }
+            System.out.println(k);
+        }
+        // Break & Continue in While Loop - you can use break and continue in a While loop:
+        int w = 0;
+        while (w < 10) {
+            System.out.println(w);
+            w++;
+            if (w == 4) {
+                break;
+            }
+        }
+        // Using a CONTINUE in a While loop.
+        int n = 0;
+        while (n < 10) {
+            if (n == 4) {
+                n++;
+                continue;
+            }
+            System.out.println(n);
+            n++;
+        }
+        }
     }
-}
