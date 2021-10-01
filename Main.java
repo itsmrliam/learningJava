@@ -106,7 +106,7 @@ public class Main {
         String name2 = "Doe";
         System.out.println(name1.concat(name2)); // Concatenate two strings
         /* Using special characters like quotes - " = \"   ' = \'   \ = \\
-        */
+         */
         String specialCharacters = "We are the so called \'Vikings\' from the North.";
         /* Other escape characters
         \n - New Line
@@ -129,8 +129,108 @@ public class Main {
         String xStr1 = "10";
         int yInt = 20;
         String zStr2 = xStr1 + yInt; // adding a number and a string, the result will be a string concatenation:
-
-
-
+        // Java Math
+        System.out.println(Math.max(5, 10)); // Finds the maximum number of the values given
+        System.out.println(Math.min(x, y)); // Finds the minimum number of the values given
+        System.out.println(Math.sqrt(64)); // Finds the square root of the value given.
+        System.out.println(Math.sqrt(yInt));
+        System.out.println(Math.abs(-27.3)); // Finds the absolute (positive) value of a negative number.
+        System.out.println(Math.random()); // returns a random number between 0.0 (inclusive), and 1.0 (exclusive)
+        int randomNum = (int) (Math.random() * 101); // Random number between 0 to 100
+        System.out.println(randomNum);
+        // Java Booleans
+        int xBool = 10;
+        int yBool = 92;
+        System.out.println(x > y); // returns 'False' because x(10) is lower than y(92)
+        System.out.println(10 > 9); // returns 'True' because 10 is higher than 9
+        System.out.println(xBool == 10); // returns 'True' because the value of x is equal to 10
+        System.out.println(10 == 15); // returns 'False' because 10 is not equal to 15.
+        /* Java If Else statements
+        if - to specify a block of code to be executed, if a specified condition is true
+        else-  to specify a block of code to be executed, if the same condition is false
+        else if - to specify a new condition to test, if the first condition is false
+        switch - to specify many alternative blocks of code to be executed
+         */
+        if (20 > 18) {
+            System.out.println("20 is greater than 18"); // runs the code as condition is met.
+        }
+        if (x < y) {
+            System.out.println("x is less than y"); // runs the code as condition is met.
+        }
+        if (x > y) {
+            System.out.println("x is greater than y"); // won't print this as its not true
+        } else {
+            System.out.println("x is less than y!"); // runs this code as this condition is met.
+        }
+        int time = 20;
+        if (time < 18) {
+            System.out.println("Good day.");
+        } else {
+            System.out.println("Good evening.");
+        }
+        int time2 = 2;
+        if (time2 < 10) {
+            System.out.println("Good morning!");
+        } else if (time2 < 20) {
+            System.out.println("Good day!");
+        } else {
+            System.out.println("Good evening!"); // Outputs "Good evening." as this condition is met
+        }
+        String result = (time2 < 18) ? "Good day." : "Good evening.";
+        System.out.println(result);
+        /* Switches - Use the switch statement to select one of many code blocks to be executed.
+        The SWITCH expression is evaluated once.
+        The value of the expression is compared with the values of each CASE.
+        If there is a match, the associated block of code is executed.
+        BREAK stops execution of more code and case testing when keyword is found and case is matched.
+        DEFAULT specifies some code to run if there is no case match.
+         */
+        int day = 8;
+        int day2 = 9;
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Not a day in the week!");
+        }
+        /* Java Loops - Loops can execute a block of code as long as a specified condition is reached.
+           Loops are handy because they save time, reduce errors and make code more readable.
+           The WHILE loop loops through a block of code as long as the specified condition is true:
+           In the example below, the code in the loop will run, over and over again,
+           as long as a variable (i) is less than 5:
+         */
+        int i = 0;
+        while (i < 5) {
+            System.out.println(i);
+            i++;
+        }
+        /* The DO/WHILE loop is a variant of the WHILE loop. This loop will execute the code block once,
+           before checking if the condition is true, then repeats the loop as long as the condition is true.
+         */
+        do {
+            System.out.println(i);
+            System.out.println("Until condition is met, add 1 number.");
+            i++;
+        }
+        while (i < 5);
     }
 }
