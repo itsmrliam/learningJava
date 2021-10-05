@@ -1,5 +1,5 @@
 # learningJava
-My journey of learning Java.
+My journey of learning Java. Written in IntelliJ Idea Community Edition 2021.2.2 by JetBrains.
 
 Day 1 Entry: Learned the basics about Java. Mostly worked on different data types.
 
