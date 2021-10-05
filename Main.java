@@ -18,8 +18,8 @@ public class Main {
         int number;
         number = 424; // Assigning a value to a previously defined variable
         System.out.println(number);
-        double dickSize = 2.49; // This is a double, used for storing numbers with a decimal place
-        System.out.println(dickSize);
+        double footSize = 2.49; // This is a double, used for storing numbers with a decimal place
+        System.out.println(footSize);
         System.out.println(number);
         final int myNum = 15; // Sets final value to a variable so it cannot be changed later on
         // myNum = 20; won't work because final value is set above
@@ -30,9 +30,9 @@ public class Main {
         boolean attractive = true; // Boolean is for true or false statements
         System.out.println(attractive);
         System.out.print("Hello, " + name + lastname + " you are " + age + " years old!");
-        System.out.print(" your dick size is " + dickSize + " inches. That's not very big!");
-         /* if (dickSize < 4;
-            System.out.print(" your dick size is " + dickSize + " inches. That's not very big!"); */
+        System.out.print(" your foot size is " + footSize + " inches. That's not very big!");
+         /* if (footSize < 4;
+            System.out.print(" your foot size is " + footSize + " inches. That's not very big!"); */
         // Maths
         int x = 5;
         int y = 6;
@@ -251,18 +251,18 @@ public class Main {
         the loop will start over again, if it's false, the loop will end.
         Statement 3 increases a value (r++) each time the code block in the loop has been executed (the print statement)
          */
-        for (int numbr = 100; numbr > 80; numbr--){ // The same as above but counting backwards!
+        for (int numbr = 100; numbr > 80; numbr--) { // The same as above but counting backwards!
             System.out.println(numbr);
         }
-        for (int t = 0; t <=10; t = t + 2) { // every time t is less than or equal to 10, adds 2 until hits 10.
+        for (int t = 0; t <= 10; t = t + 2) { // every time t is less than or equal to 10, adds 2 until hits 10.
             System.out.println(t);
             System.out.println("Adding 2");
         }
         // For-Each Loop - Used exclusively for to loop through elements in an Array
-        String[] cars = {"Volvo", "BMW", "Ford", "Mercedes"};
+        String[] cars2 = {"Volvo", "BMW", "Ford", "Mercedes"};
         // The following example outputs all elements in the CARS array, using a for-each loop
-        for (String car : cars) {
-            System.out.println(car);
+        for (String car : cars2) {
+            System.out.println(cars2);
         }
         /* Java Break
         The break statement was used earlier to "jump out" of a switch statement
@@ -274,7 +274,7 @@ public class Main {
                 System.out.println("You broke out of the loop!");
                 break; // Breaks out of the loop because f became equal to 4
             }
-                System.out.println(f);
+            System.out.println(f);
         }
         /* Java Continue
         The Continue Statement breaks one iteration (in the loop) if a specified condition occurs,
@@ -286,8 +286,7 @@ public class Main {
             if (k == 4) {
                 System.out.println("Skipping 4!");
                 continue; // Skips 4 and continues the loop
-            }
-            else if (k == 0) {
+            } else if (k == 0) {
                 System.out.println("Beginning of loop");
                 continue; // Misses out 0 in the loop (first iteration) and replacing it with a message
             }
@@ -312,5 +311,61 @@ public class Main {
             System.out.println(n);
             n++;
         }
+        /* Java Arrays are used to store multiple values in a single variable, instead of declaring
+        seperate variables for each value.
+        To declare an array, define the variable type with square brackets [].
+        To insert values to it, we can use an array literal - place the values in a commna-seperated list,
+        inside curly braces. For example String[] myArray = {"Sausage", "Pancakes", "Biscuits"};
+         */
+        String[] cars = {"Volvo", "BMW", "Ferrari", "Honda"};
+        // To create an array of integers, you could write
+        int[] myNumbers1 = {10, 20, 30, 40, 50, 60};
+        /* Access the Elements of an Array
+        You can access an array element by referring to the index number (starting at 0, not 1).
+        The below statement accesses the value of the first element in the cars array
+         */
+        System.out.println(cars[0]);
+        // Change an Array element - To change the value of a specific element, refer to the index number.
+        cars[0] = "Lamborghini";
+        System.out.println(cars[0]); // Now outputs Lamborghini instead of Volvo.
+        // Array Length - Find out how many elements an Array has, using the length property.
+        System.out.println(cars.length);
+        System.out.println(myNumbers1.length);
+        /* You can loop through the Array elements using the FOR loop, and use the LENGTH property to
+        specify how many times the loop should run.
+         */
+        for (int carList = 0; carList < cars.length; carList++) {
+            System.out.println(cars[carList]);
+        }
+        // You can also use a FOR-EACH loop, which is exclusivly used to loop through elements in an array
+        for (String myLoop : cars) {
+            System.out.println(myLoop + " is fast");
+        }
+            /* The above example can be read as: for each String element called myLoop in cars, print out the
+            value of myLoop. If you compare the for loop and for-each loop, you will see that the for-each
+            method is easier to write, it does not require a counter (using the length property), and it more readable.
+
+            Multidimensional Array is an array inside an array.
+            To create one, add each array within its own set of curly braces.
+             */
+            int [][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+            int [][] myNumbersx = { {1, 2, 3, 4}, {5, 6, 7} };
+            /* myNumbers is now an array with two arrays as its elements.
+            To access the elements of the myNumbers array, specify two indexes: one for the array,
+            and one for the element inside that array. This example accesses the third element (2)
+            in the second array (1) of myNumbers.
+            */
+            int xo = myNumbers[1][2];
+            System.out.println(xo);
+            /* We can also use a for loop inside another for loop to get the elements of a
+            two-dimensional array (we still have to point to the two indexes):
+             */
+            for (int xi = 0; xi < myNumbersx.length; ++xi) {
+                for(int ji = 0; ji < myNumbersx[xi].length; ++ji) {
+                    System.out.println(myNumbersx[xi][ji]);
+                }
+            }
+            System.out.println("You've reached the end of the my tutorial. See next Java file for Methods + more!");
+            System.out.println("                          x~xLiamcttn 2021x~x");
         }
     }
